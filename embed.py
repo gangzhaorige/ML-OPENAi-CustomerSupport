@@ -91,7 +91,6 @@ for row in df.iterrows():
 print('Training started.')
 df = pd.DataFrame(shortened, columns = ['text'])
 df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
-df.n_tokens.hist()
 print('Apply embedding.')
 ################################################################################
 ### Step 10
