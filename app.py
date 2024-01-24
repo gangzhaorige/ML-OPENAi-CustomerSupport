@@ -16,8 +16,8 @@ df.head()
 @app.route("/", methods=("GET", "POST"))
 def index():
     if request.method == "POST":
-        animal = request.form["animal"]
-        response = answer_question(df, question=animal)
+        question = request.form["question"]
+        response = answer_question(df, question=question)
         return redirect(url_for("index", result=response))
 
     result = request.args.get("result")
