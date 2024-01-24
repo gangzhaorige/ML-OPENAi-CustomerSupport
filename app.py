@@ -8,8 +8,6 @@ from scipy import spatial
 
 app = Flask(__name__)
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
 df=pd.read_csv('processed/embeddings.csv', index_col=0)
 df['embeddings'] = df['embeddings'].apply(eval).apply(np.array)
 df.head()
@@ -100,7 +98,7 @@ def answer_question(
         print("\n\n")
 
     try:
-        # Create a completions using the questin and context
+        # Create a completions using the question and context
         response = openai.completions.create(
             prompt=f"Answer the question based on the context below, and if the question can't be answered based on the context, say \"I don't know\"\n\nContext: {context}\n\n---\n\nQuestion: {question}\nAnswer:",
             temperature=0,
