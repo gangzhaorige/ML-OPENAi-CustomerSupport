@@ -148,10 +148,10 @@ def crawl(url):
             print("Unable to parse page " + url)
 
         # Get the hyperlinks from the URL and add them to the queue
-        # for link in get_domain_hyperlinks(local_domain, url):
-        #     if link not in seen:
-        #         queue.append(link)
-        #         seen.add(link)
+        for link in get_domain_hyperlinks(local_domain, url):
+            if link not in seen:
+                queue.append(link)
+                seen.add(link)
 
 ################################################################################
 ### Step 5
