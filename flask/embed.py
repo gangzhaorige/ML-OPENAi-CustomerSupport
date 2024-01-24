@@ -4,7 +4,7 @@ import pandas as pd
 import tiktoken
 import openai
 
-from test import init_api
+from init_api import init_api
 
 init_api()
 
