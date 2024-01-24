@@ -11,7 +11,7 @@ import pandas as pd
 HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
 
 # Define root domain to crawl
-domain = "fb.com"
+domain = "about.fb.com"
 full_url = "https://about.fb.com/news/2021/10/facebook-company-is-now-meta/"
 
 # Create a class to parse the HTML and get the hyperlinks
@@ -193,6 +193,7 @@ def store_text():
 
 def main():
     crawl(full_url)
+    store_text()
 
 if __name__ == '__main__':
     main()
