@@ -42,7 +42,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+        <h3><a href="https://about.fb.com/news/2021/10/facebook-company-is-now-meta/" target="_blank">About Meta</a></h3>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -51,7 +51,7 @@ export default function Home() {
             value={questionInput}
             onChange={(e) => setQuestionInput(e.target.value)}
           />
-          <input type="submit" value="Answer question" />
+          <input type="submit" value="Generate Response" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>
