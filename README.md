@@ -1,4 +1,4 @@
-# Generative Ai Using OpenAI API
+# Generative Ai Customer Support (Web based)
 
 [**Google Slides**](https://docs.google.com/presentation/d/1jpuUfITjnyDJ-wRuuh_wuDdQy6yLOk9HNao1Oa-sSn4/edit?usp=sharing)
 
