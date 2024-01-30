@@ -72,6 +72,9 @@ $ flask run
 $ npm run dev
 ```
 
+## Enter your question to generate a response.
+![alt text](sample.png)
+
 
 
 
