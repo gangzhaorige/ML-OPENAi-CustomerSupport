@@ -1,5 +1,6 @@
 # Generative Ai Using OpenAI API
 
+[**Google Slides**](https://docs.google.com/presentation/d/1jpuUfITjnyDJ-wRuuh_wuDdQy6yLOk9HNao1Oa-sSn4/edit?usp=sharing)
 
 ## Introduction
 This project is to use the popular OpenAI models to create a customer support website to answer questions from customers about their website.
@@ -29,7 +30,7 @@ Users can inquire about the website and receive answers that are readily availab
 
 **The implementation of this project will follow two distinct approaches:**
 - Flask (Python)
-- NodeJS (JavaScript)
+- NodeJS (JavaScript) **Note: NodeJS will call python script to perform api call.**
 
 ## Getting Started
 
@@ -60,13 +61,13 @@ python3 embed.py
 ```
 
 ## To run Flask Version
-
+[Python Version Setup](https://github.com/gangzhaorige/ML-OPENAi-CustomerSupport/tree/main/flask)
 ```
 $ flask run
 ```
 
 ## To run NodeJS Version
-
+[Python Version Setup](https://github.com/gangzhaorige/ML-OPENAi-CustomerSupport/tree/main/node_js)
 ```
 $ npm run dev
 ```
