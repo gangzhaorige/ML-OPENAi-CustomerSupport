@@ -19,3 +19,12 @@
 - OpenAI Integration
 - Sentiment Analysis
 
+## Setup
+
+Please follow the below link to setup environment.
+
+[Flask Setup](https://github.com/gangzhaorige/ML-OPENAi-CustomerSupport/tree/main/EmailToCustomer/backend)
+
+[Flutter Setup](https://github.com/gangzhaorige/ML-OPENAi-CustomerSupport/tree/main/EmailToCustomer/frontend)
+
+
