@@ -1,8 +1,10 @@
 ## Customer Support System with OpenAI Integration
 
+
+
 - **Description:** This project utilizes OpenAI to automate the customer support process for a large electronics store. It generates personalized email subjects and summaries based on customer comments, performs sentiment analysis to determine positivity or negativity, and dynamically generates an appropriate email response.
 - **Technologies:** OpenAI, Sentiment Analysis
-- **Link:** [Google Slides](https://github.com/yourusername/customer-support-system)
+- [Google Slides](https://docs.google.com/presentation/d/17yW1XVZRyuhksjTly-i0119q7Sgzn__H8ZQcXP8ejSQ/edit?usp=sharing)
 
 ## Features
 
