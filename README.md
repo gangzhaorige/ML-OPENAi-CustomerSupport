@@ -9,3 +9,7 @@ This project uses OpenAI models, including `text-embedding-ada-002` for relatedn
 ## [Email to Customer](https://github.com/gangzhaorige/ML-OPENAi-CustomerSupport/tree/main/EmailToCustomer)
 
 This project automates customer support for a large electronics store using OpenAI. It generates personalized email subjects and summaries, performs sentiment analysis on customer feedback, and dynamically generates appropriate email responses.
+
+
+## [Moderation Classification Checkout Evaluation](https://github.com/gangzhaorige/ML-OPENAi-CustomerSupport/tree/main/MCCE)
+

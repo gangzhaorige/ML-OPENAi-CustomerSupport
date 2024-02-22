@@ -1,5 +1,5 @@
 # An email to the customer_MCCE
-[Google Slides](https://docs.google.com/presentation/d/1_MgqojZY1ug6ObtVuR0_PZEqpPUlQ9ck/edit?usp=share_link&ouid=108536594603475091088&rtpof=true&sd=true)
+[Google Slides](https://docs.google.com/presentation/d/1juV5ZMmaAuVDiQfxmvStspKXtD8lwQTZFXFX4j1ldW4/edit?usp=sharing)
 
 ## Project Overview
 1. If you're a customer service assistant for a large electronics store
