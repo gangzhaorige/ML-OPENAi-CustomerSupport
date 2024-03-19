@@ -1,8 +1,9 @@
 import os
+from pathlib import Path
 from flask_cors import CORS, cross_origin
 
 import openai
-from flask import Flask, jsonify, request
+from flask import Flask, Response, jsonify, request
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
@@ -17,6 +18,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 persist_directory = 'docs/chroma/'
 
 delimiter = '```'
+counter = 0
 
 embedding = OpenAIEmbeddings()
 
@@ -49,10 +51,36 @@ qa = ConversationalRetrievalChain.from_llm(
 @cross_origin()
 def index():
     question = request.form.get('question')
-    print(question)
     result = qa.invoke({"question": question})
-    return {'response' : result['answer']}
-    
+
+    global counter
+    speech_file_path = Path(f'reply{counter}.mp3')
+
+    with openai.audio.speech.with_streaming_response.create(
+        model="tts-1",
+        voice="alloy",
+        input=result['answer'],
+    ) as response:
+        print('Playing audio....')
+        response.stream_to_file(speech_file_path)
+    counter += 1
+    return {
+        'response' : result['answer'],
+        'url': f'reply{counter - 1}.mp3'
+    }
+
+
+@app.route("/mp3/<filename>")
+def streammp3(filename):
+    print(filename)
+    def generate():
+        with open(filename, "rb") as fwav:
+            data = fwav.read(1024)
+            while data:
+                yield data
+                data = fwav.read(1024)
+    response = Response(generate(), mimetype="audio/mpeg")
+    return response
 
 if __name__ == '__main__':
     app.run(debug=True)
