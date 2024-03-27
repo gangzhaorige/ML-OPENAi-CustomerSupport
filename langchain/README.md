@@ -15,4 +15,5 @@
 2. Splitting: Splitting loaded documents into smaller chunks.
 3. VectorSpace: Apply indexing/embedding on those chunks.
 4. Retrieval: Generate the answer.
+5. Speech to Text to Speech.
 
