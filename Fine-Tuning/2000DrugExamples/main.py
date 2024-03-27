@@ -15,7 +15,7 @@ reasons = df["Reason"].unique()
 reasons_dict = {reason: i for i, reason in enumerate(reasons)}
 df["Reason"] = df["Reason"].apply(lambda x: "" + str(reasons_dict[x]))
 # Add system message
-system_message = {"role": "system", "content": "You are profesional drug classifier."}
+system_message = {"role": "system", "content": "You are professional drug classifier."}
 # Initialize the list to store messages
 messages = []
 # Iterate over rows in the DataFrame
@@ -36,53 +36,53 @@ with open("output.jsonl", "w") as f:
         f.write("\n")
 
 
-import os
-import openai
+# import os
+# import openai
 
-from test import init_api
-
-
-
-init_api()
+# from test import init_api
 
 
 
-# Configure the model ID. Change this to your model ID.
-model = "ft:gpt-3.5-turbo-0125:learninggpt:mine:97CCXUlH"
+# init_api()
 
-# Let's use a drug from each class
-drugs = [
-    "A CN Gel(Topical) 20gmA CN Soap 75gm",  # Class 0
-    "Addnok Tablet 20'S",                    # Class 1
-    "ABICET M Tablet 10's",                  # Class 2
-]
 
-def get_completion(
-        messages,
-        model="gpt-4-0125-preview",
-        temperature=0,
-        max_tokens=1000
-    ): 
-    response = openai.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=temperature, 
-        max_tokens=max_tokens
-    )
-    return response.choices[0].message.content
 
-# Returns a drug class for each drug
-for drug_name in drugs:
-    prompt = "Drug: {}\nMalady:".format(drug_name)
+# # Configure the model ID. Change this to your model ID.
+# model = "ft:gpt-3.5-turbo-0125:learninggpt:drug:97EUlaSC"
 
-    messages = [
-        {'role' : 'system', 'content' : f'You are profesional drug classifier.'},
-        {'role' : 'user', 'content' : prompt},
-    ]
-    drug_class = get_completion(
-        messages=messages,
-        model=model,
-        temperature=0,
-        # max_tokens=,
-    )
-    print(drug_class)
+# # Let's use a drug from each class
+# drugs = [
+#     "A CN Gel(Topical) 20gmA CN Soap 75gm",  # Class 0
+#     "Addnok Tablet 20'S",                    # Class 1
+#     "ABICET M Tablet 10's",                  # Class 2
+# ]
+
+# def get_completion(
+#         messages,
+#         model="gpt-4-0125-preview",
+#         temperature=0,
+#         max_tokens=1000
+#     ): 
+#     response = openai.chat.completions.create(
+#         model=model,
+#         messages=messages,
+#         temperature=temperature, 
+#         max_tokens=max_tokens
+#     )
+#     return response.choices[0].message.content
+
+# # Returns a drug class for each drug
+# for drug_name in drugs:
+#     prompt = "Drug: {}\nMalady:".format(drug_name)
+
+#     messages = [
+#         {'role' : 'system', 'content' : f'You are professional drug classifier.'},
+#         {'role' : 'user', 'content' : prompt},
+#     ]
+#     drug_class = get_completion(
+#         messages=messages,
+#         model=model,
+#         temperature=0.5,
+#         max_tokens=1,
+#     )
+#     print(drug_class)
