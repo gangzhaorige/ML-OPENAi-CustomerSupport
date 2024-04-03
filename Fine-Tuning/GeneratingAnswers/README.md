@@ -1,5 +1,5 @@
 # Keyword and Semantinc Search with Rerank.
-[Google Slides](https://docs.google.com/presentation/d/1HbuqrP85wuZ1Wl5YukUxlrxRC-l-L6J3TlXRzlNMPfc/edit?usp=sharing)
+[Google Slides](https://docs.google.com/presentation/d/13j_NN2KoxXAKjwUjnM6fW4Vz7gnNrGiTaJciD-4taOI/edit?usp=sharing)
 
 
 ### Steps:
