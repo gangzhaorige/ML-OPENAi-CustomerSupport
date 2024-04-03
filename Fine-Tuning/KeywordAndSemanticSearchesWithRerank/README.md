@@ -1,11 +1,12 @@
-# Advanced Fine Tuning Drug Classification
-[Google Slides](https://docs.google.com/presentation/d/1YK6yrfuiu1WQ2Qc-H9HnLSNyV6SsaCBtmhRSFMVm5U8/edit?usp=sharing)
+# Keyword and Semantinc Search with Rerank.
+[Google Slides](https://docs.google.com/presentation/d/1HbuqrP85wuZ1Wl5YukUxlrxRC-l-L6J3TlXRzlNMPfc/edit?usp=sharing)
 
 
 ### Steps:
-1. Read data from Excel Spreadsheet.
-2. Convert data into dataset. Drug → Class
-3. Use the dataset to fine tune the model.
-4. Test the fine tuned model.
+1. Import cohere and weaviate
+2. Apply Dense retrieval to a query.
+3. Improve Keyword search with Rerank.
+4. Improve Dense Retrieval with Rerank.
+
 
 
